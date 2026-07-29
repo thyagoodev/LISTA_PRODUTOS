@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+:root {
+    --div-fundo: #F8F9FA;
+    --branca: #ffffff;
+    --botao1: #198754;
+    --botao2: #DC9487;
+    --cor1: #928a88;
+    --cor2: #c43d26;
+
+}
+
+body {
+    margin: 20px;
+}
