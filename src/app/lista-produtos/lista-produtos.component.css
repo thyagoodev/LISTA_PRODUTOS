@@ -10,19 +10,21 @@ body{
 }
 
 #div-form{
-    width: 600px;
+    width: 500px;
     margin: 40px auto;
-    background-color: #dff5ee;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+
+    background: white;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
 }
 
 h3{
     text-align: center;
     font-size: 30px;
     margin-bottom: 30px;
-    color: #1d3557;
+    color: #fcfdff;
     letter-spacing: 2px;
 }
 
@@ -61,7 +63,7 @@ button{
 }
 
 #btnAdd{
-    background-color: #2196F3;
+    background-color: #3311f7;
 }
 
 #btnAdd:hover{
@@ -91,4 +93,100 @@ button{
 
 .div-item:last-child{
     border-bottom: none;
+}
+
+#div-form {
+    background: rgb(117, 117, 168) !important;
+}
+
+#div-lista{
+
+    margin-top:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.div-item{
+
+    background:rgb(117, 117, 168);
+
+    padding:16px;
+
+    border-radius:10px;
+
+    border-left:6px solid #d5d6da;
+
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.div-item:hover{
+
+    transform:translateX(6px);
+
+    background:rgb(214, 212, 212);
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.div-item{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgb(117, 117, 168);
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    margin-bottom:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.div-item:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.btn-excluir{
+
+    width:38px;
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ef4444;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:.3s;
+}
+
+.btn-excluir:hover{
+
+    background:#dc2626;
+
+    transform:scale(1.1);
 }

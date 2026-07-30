@@ -2,25 +2,68 @@
 
     <h3>LISTA PRODUTOS</h3>
 
-    <form id="formulario">
+    <form>
 
-        <label for="descricao">Descrição Produto</label>
-        <input type="text" name="descricao" id="descricao">
+        <label>Descrição Produto</label>
 
-        <label for="valor">Valor</label>
-        <input type="number" name="valor" id="valor">
+        <input
+            type="text"
+            [(ngModel)]="descricao_produto"
+            name="descricao">
+
+        <label>Valor</label>
+
+        <input
+            type="number"
+            [(ngModel)]="valor_unitario"
+            name="valor">
 
         <div id="div-btns">
-            <button type="button" id="btnAdd">Adicionar</button>
-            <button type="button" id="btn-limpar">Limpar Tudo</button>
+
+            <button
+                type="button"
+                id="btnAdd"
+                (click)="addItem()">
+
+                Adicionar
+
+            </button>
+
+            <button
+                type="button"
+                id="btn-limpar"
+                (click)="limparTudo()">
+
+                Limpar Tudo
+
+            </button>
+
         </div>
 
     </form>
 
     <div id="div-lista">
-        <div class="div-item">1 - Pão - 4,50</div>
-        <div class="div-item">1 - Manteiga - 16,00</div>
-        <div class="div-item">1 - Café - 12,80</div>
-    </div>
 
+        <div
+            class="div-item"
+            *ngFor="let item of listaItens; let i = index">
+    
+            <span>
+                {{item.idProduto}}
+                -
+                {{item.descricaoProduto}}
+                -
+                R$ {{item.valorUnitario}}
+            </span>
+    
+            <button
+                type="button"
+                class="btn-excluir"
+                (click)="excluirItem(i)">
+                🗑️
+            </button>
+    
+        </div>
+    
+    </div>
 </div>

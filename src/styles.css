@@ -8,14 +8,39 @@
 }
 
 :root{
+
     --div-fundo: #dFF5FA;
-    --branca: #ffffff;
-    --botao1: #000000;
+    --branca: #e7dcdc;
+    --botao1: #198754;
     --botao2: #DC3545;
-    --cor1: #1d201f;
+    --cor1: #D1E7DD;
     --cor2: #D0EDF0;
+
 }
 
 body{
     margin: 20px;
+}
+
+body{
+
+    margin:0;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background: linear-gradient(
+        135deg,
+        rgb(100, 100, 104) 30%,
+        #442083 60%,
+        rgb(117, 117, 168)75%
+    );
+
+    background-attachment: fixed;
+
 }
