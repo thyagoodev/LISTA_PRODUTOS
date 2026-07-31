@@ -63,7 +63,7 @@ button{
 }
 
 #btnAdd{
-    background-color: #3311f7;
+    background-color: rgb(69, 174, 192);
 }
 
 #btnAdd:hover{
@@ -71,7 +71,7 @@ button{
 }
 
 #btn-limpar{
-    background-color: #f44336;
+    background-color: rgb(69, 174, 192);
 }
 
 #btn-limpar:hover{
@@ -96,7 +96,7 @@ button{
 }
 
 #div-form {
-    background: rgb(117, 117, 168) !important;
+    background: rgb(97, 205, 224) !important;
 }
 
 #div-lista{
@@ -140,7 +140,7 @@ button{
     justify-content:space-between;
     align-items:center;
 
-    background:rgb(117, 117, 168);
+    background:rgb(211, 211, 211);
 
     padding:15px 20px;
 

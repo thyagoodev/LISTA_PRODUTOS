@@ -9,7 +9,6 @@
 
 :root{
 
-    --div-fundo: #dFF5FA;
     --branca: #e7dcdc;
     --botao1: #198754;
     --botao2: #DC3545;
@@ -35,10 +34,10 @@ body{
     align-items:center;
 
     background: linear-gradient(
-        135deg,
-        rgb(100, 100, 104) 30%,
-        #442083 60%,
-        rgb(117, 117, 168)75%
+        150deg,
+        rgb(83, 183, 201) 52%,
+        rgb(29, 139, 158)54%,
+        rgb(48, 156, 170)45%
     );
 
     background-attachment: fixed;
