@@ -20,3 +20,19 @@
 body {
     margin: 20px;
 }
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #302e2e 50%,
+        #0f0f0f 70%,
+        #3b393b 40%
+    );
+}

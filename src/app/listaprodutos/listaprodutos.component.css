@@ -1,57 +1,126 @@
 #div-form {
-    width: 600px;
-    min-height: 580px;
-    padding: 20px;
-    margin: 20px auto;
-    background-color: var(--div-fundo);
-    border-radius: 8px;
+    width: 700px;
+    min-height: 600px;
+
+    padding: 35px;
+    margin: 40px auto;
+
+    background: linear-gradient(
+        135deg,
+        #032ce4,
+        #c2b2d3,
+        #ece7ec
+    );
+
+    border-radius: 15px;
+    box-sizing: border-box;
 }
 
-h3{
+
+/* Título */
+
+h3 {
     text-align: center;
+    font-size: 28px;
+    color: rgb(22, 17, 17);
+    margin-bottom: 30px;
 }
+
+
+/* Formulário */
 
 #formulario {
-    background-color: var(--branca);
-    padding: 25px;
-    border-radius: 8px;
+    background-color: rgb(111, 139, 165);
+    padding: 30px;
+    border-radius: 12px;
 }
+
+
+/* Textos */
 
 label {
     display: block;
-    font-size: 1.2em;
-    margin: 10px 0px;
-    letter-spacing: 5px;
+    font-size: 18px;
+    margin: 15px 0 8px;
 }
+
+
+/* Campos */
 
 input {
-    height: 30px;
-    font-size: 0.8em;
-    padding: 10px;
+    height: 35px;
+    width: 300px;
+
+    padding: 5px 10px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    box-sizing: border-box;
 }
+
+
+/* Botões */
 
 #div-btns {
-    margin: 20px 0px;
-    padding: 5px;
+    margin-top: 25px;
+
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 15px;
 }
+
 
 button {
-    margin-left: 150px;
-    height: 30px;
-    margin-left: 40px;
-    color: var(--branca);
+    height: 40px;
+
+    padding: 0 20px;
+
+    color: white;
+
     border: none;
+    border-radius: 5px;
+
     cursor: pointer;
+
+    font-size: 15px;
 }
+
+
+/* Botão adicionar */
 
 #btnAdd {
-    background-color: var(--botao1);
+    background-color: #28a745;
 }
 
-#btn-limpar{
-    background-color: var(--botao2);
+
+/* Botão limpar */
+
+#limpar {
+    background-color: #dc3545;
 }
 
+
+/* Lista */
+
+#div-list {
+    background-color: rgb(111, 139, 165);
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+}
+
+
+/* Cada produto */
+
+.div-item {
+    padding: 10px;
+
+    border-bottom: 1px solid #ddd;
+
+    font-size: 17px;
+}
