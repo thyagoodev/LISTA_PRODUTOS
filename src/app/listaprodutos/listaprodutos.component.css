@@ -3,124 +3,191 @@
     min-height: 600px;
 
     padding: 35px;
+
     margin: 40px auto;
 
     background: linear-gradient(
         135deg,
-        #032ce4,
+        #3023ae,
         #c2b2d3,
         #ece7ec
     );
 
     border-radius: 15px;
+
     box-sizing: border-box;
 }
 
 
-/* Título */
+/* TÍTULO */
 
 h3 {
     text-align: center;
+
     font-size: 28px;
-    color: rgb(22, 17, 17);
+
+    color: black;
+
     margin-bottom: 30px;
 }
 
 
-/* Formulário */
+/* FORMULÁRIO */
 
 #formulario {
     background-color: rgb(111, 139, 165);
+
     padding: 30px;
+
     border-radius: 12px;
 }
 
 
-/* Textos */
+/* LABEL */
 
 label {
     display: block;
-    font-size: 18px;
+
+    font-size: 20px;
+
     margin: 15px 0 8px;
 }
 
 
-/* Campos */
+/* CAMPOS */
 
 input {
-    height: 35px;
-    width: 300px;
+    display: block;
 
-    padding: 5px 10px;
+    width: 280px;
+
+    height: 35px;
+
+    padding: 20px 10px;
 
     font-size: 16px;
 
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
     box-sizing: border-box;
+
+    border: none;
+
+    border-radius: 5px;
 }
 
 
-/* Botões */
+/* BOTÃO ADICIONAR */
 
-#div-btns {
-    margin-top: 25px;
+#div-adicionar {
+    margin-top: 35px;
 
-    display: flex;
-    gap: 15px;
+    text-align: center;
 }
 
 
-button {
-    height: 40px;
-
-    padding: 0 20px;
+#btnAdd {
+    background-color: #28a745;
 
     color: white;
 
     border: none;
-    border-radius: 5px;
+
+    border-radius: 6px;
+
+    padding: 10px 250px;
+
+    font-size: 16px;
 
     cursor: pointer;
-
-    font-size: 15px;
 }
 
 
-/* Botão adicionar */
-
-#btnAdd {
-    background-color: #28a745;
-}
-
-
-/* Botão limpar */
-
-#limpar {
-    background-color: #dc3545;
-}
-
-
-/* Lista */
+/* LISTA */
 
 #div-list {
     background-color: rgb(111, 139, 165);
 
     margin-top: 25px;
 
-    padding: 20px;
+    padding: 15px;
 
     border-radius: 12px;
 }
 
 
-/* Cada produto */
+/* PRODUTO */
 
 .div-item {
-    padding: 10px;
+    display: flex;
 
-    border-bottom: 1px solid #ddd;
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 12px 8px;
+
+    border-bottom: 1px solid white;
 
     font-size: 17px;
+}
+
+
+/* BOTÕES EDITAR E EXCLUIR */
+
+.acoes {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.btn-editar {
+    background-color: #f0ad4e;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 7px 12px;
+
+    cursor: pointer;
+}
+
+
+.btn-excluir {
+    background-color: #dc3545;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 7px 12px;
+
+    cursor: pointer;
+}
+
+
+/* LIMPAR TUDO */
+
+#limpar {
+    display: block;
+
+    margin: 20px auto 0;
+
+    background-color: #dc3545;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 10px 260px;
+
+    cursor: pointer;
+
+    font-size: 15px;
 }

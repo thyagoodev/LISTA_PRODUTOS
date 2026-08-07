@@ -10,13 +10,17 @@ import { CommonModule } from '@angular/common';
 })
 export class ListaprodutosComponent {
 
-  produtos: string[] = [
-    '1 - Pão - 4,50',
-    '1 - Manteiga - 16,00',
-    '1 - Café - 12,80'
+  produtos = [
+    { descricao: 'Pão', valor: 4.50 },
+    { descricao: 'Manteiga', valor: 16.00 },
+    { descricao: 'Café', valor: 12.80 }
   ];
 
+  indiceEditando: number | null = null;
+
+
   adicionarProduto() {
+
     const descricao = (document.getElementById('descricao') as HTMLInputElement).value;
     const valor = (document.getElementById('valor') as HTMLInputElement).value;
 
@@ -25,10 +29,70 @@ export class ListaprodutosComponent {
       return;
     }
 
-    this.produtos.push(`1 - ${descricao} - ${valor}`);
+    if (this.indiceEditando !== null) {
+
+      this.produtos[this.indiceEditando] = {
+        descricao: descricao,
+        valor: Number(valor)
+      };
+
+      this.indiceEditando = null;
+
+    } else {
+
+      this.produtos.push({
+        descricao: descricao,
+        valor: Number(valor)
+      });
+
+    }
+
+    this.limparCampos();
   }
 
-  limparTudo() {
-    this.produtos = [];
+
+  editarProduto(index: number) {
+
+    const produto = this.produtos[index];
+
+    const descricao = document.getElementById('descricao') as HTMLInputElement;
+    const valor = document.getElementById('valor') as HTMLInputElement;
+
+    descricao.value = produto.descricao;
+    valor.value = produto.valor.toString();
+
+    this.indiceEditando = index;
   }
+
+
+  excluirProduto(index: number) {
+
+    this.produtos.splice(index, 1);
+
+    if (this.indiceEditando === index) {
+      this.indiceEditando = null;
+      this.limparCampos();
+    }
+  }
+
+
+  limparTudo() {
+
+    this.produtos = [];
+
+    this.indiceEditando = null;
+
+    this.limparCampos();
+  }
+
+
+  limparCampos() {
+
+    const descricao = document.getElementById('descricao') as HTMLInputElement;
+    const valor = document.getElementById('valor') as HTMLInputElement;
+
+    descricao.value = '';
+    valor.value = '';
+  }
+
 }

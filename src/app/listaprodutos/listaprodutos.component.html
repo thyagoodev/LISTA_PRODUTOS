@@ -5,29 +5,88 @@
     <form id="formulario">
 
         <label for="descricao">Descrição Produtos</label>
-        <input type="text" name="descricao" id="descricao">
+
+        <input
+            type="text"
+            name="descricao"
+            id="descricao"
+        >
+
 
         <label for="valor">Valor</label>
-        <input type="number" name="valor" id="valor">
 
-        <div id="div-btns">
-            <button type="button" id="btnAdd" (click)="adicionarProduto()">
-                Adicionar
+        <input
+            type="number"
+            name="valor"
+            id="valor"
+        >
+
+
+        <!-- ADICIONAR FICA SOZINHO -->
+        <div id="div-adicionar">
+
+            <button
+                type="button"
+                id="btnAdd"
+                (click)="adicionarProduto()"
+            >
+                {{ indiceEditando !== null ? 'Atualizar' : 'Adicionar' }}
             </button>
 
-            <button type="button" id="limpar" (click)="limparTudo()">
-                Limpar Tudo
-            </button>
         </div>
 
     </form>
 
+
+    <!-- LISTA DOS PRODUTOS -->
+
     <div id="div-list">
 
-        <div class="div-item" *ngFor="let produto of produtos">
-            {{ produto }}
+        <div
+            class="div-item"
+            *ngFor="let produto of produtos; let i = index"
+        >
+
+            <span>
+                {{ i + 1 }} - {{ produto.descricao }} -
+                {{ produto.valor | number:'1.2-2' }}
+            </span>
+
+
+            <div class="acoes">
+
+                <button
+                    type="button"
+                    class="btn-editar"
+                    (click)="editarProduto(i)"
+                >
+                    Editar
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn-excluir"
+                    (click)="excluirProduto(i)"
+                >
+                    Excluir
+                </button>
+
+            </div>
+
         </div>
 
     </div>
+
+
+    <!-- LIMPAR TUDO -->
+
+    <button
+        type="button"
+        id="limpar"
+        (click)="limparTudo()"
+    >
+        Limpar Tudo
+    </button>
 
 </div>
